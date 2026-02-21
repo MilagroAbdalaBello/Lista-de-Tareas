@@ -47,3 +47,61 @@ h3 {
 #miBoton:hover {
     background-color: #45a049; /* Efecto al pasar el mouse */
 }
+
+/*El modal al presionar el boton*/
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fondo oscuro semitransparente */
+}
+
+.modal-contenido {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+/*Diseño de cada boton */
+
+/* Contenedor de cada tarea */
+/* Contenedor de la lista */
+#listaTareas {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 0;
+}
+
+/* Cada item de la lista */
+.item-tarea {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    gap: 12px;
+}
+
+/* El texto de la tarea */
+.texto-tarea {
+    flex-grow: 1; /* Esto empuja los botones a la derecha */
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Clase para cuando tachamos la tarea */
+.completada .texto-tarea {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.6;
+}
